@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anandu's Space</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #container{
+            height: auto;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        header{
+            height: 70vh;
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            background-color:blueviolet;
+            border-radius: 0px 0px 70% ;
+            align-items: center;
+            color: white;
+        }
+        .cards{
+            width: auto;
+            height: 70vh;
+            padding-top: 60%;
+            padding-left: 20px;
+            margin-top: 20px;
+            background-color:blueviolet;
+            border-radius: 50% 0px 50% 0px;
+            color: aliceblue;
+        }
+        .invert{
+            border-radius: 0px 50% 0px 50%;
+        }
+        footer{
+            background-color: #333;
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            color: aliceblue;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        nav{
+            width: 100%;
+            height: 30px;
+            position: fixed;
+            background-color: rgba(0, 0, 0, .6);
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            background-color: rgba(0, 0, 0, .1);
+            color: aliceblue;
+            padding: 3px 5px 3px 5px;
+            margin: 10px;
+            border-radius: 7px;
+            border: 1px solid blueviolet;
+            transition: 1s;
+        }
+        button:hover{
+            background-color: black;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <a href="#about">
+                <button>
+                    About
+                </button>
+            </a>
+            <button>
+                Skills
+            </button>
+            <button>
+                Passion
+            </button>
+            <button>
+                Vision
+            </button>
+        </nav>
+        <header class="title">
+            <h1>Anandu Babu</h1>
+            <h3>Creative Soul</h3>
+        </header>
+        <a name="about"></a>
+        <div class="cards">
+            
+            <p>
+                Hi, I am Anandu Babu from Thrissur,Kerala,India.
+            </p>
+            <p>I am currently working as a Graduate Trainee at Tata Consaltancy Servises</p>
+        </div>
+        <div class="cards invert">
+
+        </div>
+    </div>
+    <footer>
+        <p>Desinged and developed by Anandu Babu</p>
+    </footer>
+</body>
+</html>
