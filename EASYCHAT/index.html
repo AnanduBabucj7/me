@@ -43,7 +43,7 @@
             flex-flow: column;
             align-content: center;
             justify-content: space-between;
-            background-color: #989898;
+            background-color: rgba(0, 0, 0, 0.6);
             align-items: center;
             border: 2px solid darkgreen;
             border-radius: 50px 10px;
@@ -96,7 +96,7 @@
             text-align: center;
 
         }
-        .ballcanvas{
+        #ballcanvas{
             display: block;
             position: absolute;
             background-color:#e3e3e3;
@@ -109,42 +109,6 @@
             background-color:#01b636 ;
             position: absolute;
             box-shadow:2px 5px 10px rgba(1, 0, 0, 1);
-        }
-        .b1{
-            height: 40px;
-            width: 40px;
-            top: 20%;
-            left: 20%;
-        }
-        .b2{
-            height: 20px;
-            width: 20px;
-            top: 70%;
-            left: 10%;
-        }
-        .b3{
-            height: 50px;
-            width: 50px;
-            top: 76%;
-            left: 80%;
-        }
-        .b4{
-            height: 30px;
-            width: 30px;
-            top: 15%;
-            left: 67%;
-        }
-        .b5{
-            height: 20px;
-            width: 20px;
-            top: 24%;
-            left: 66%;
-        }
-        .b6{
-            height: 20px;
-            width: 20px;
-            top: 30%;
-            left: 20%;
         }
         i{
             margin: 10px;
@@ -161,20 +125,34 @@
             var link="http://wa.me/";
             var code=document.data.code.value;
             var num=document.data.number.value;
-            link=link+code+num;
-            console.log(link)
-            window.location.href = link;
+            if(isNaN(num)){
+                alert("Enter a number ")
+            }else{
+                link=link+code+num;
+                console.log(link)
+                window.location.href = link;
+            }
+        }
+        window.onload=function(){
+            for(let i=0;i<110;i++){
+            var bubble=document.createElement("div");
+            bubble.className="ball";
+            var posx=Math.random()*100+"%";
+            var posy=Math.random()*100+"%";
+            var rad=Math.random()*60+"px";
+            bubble.style.height=rad;
+            bubble.style.width=rad;
+            bubble.style.left=posx;
+            bubble.style.top=posy;
+            console.log(rad)
+            document.getElementById("ballcanvas").appendChild(bubble);
+            }
+            
         }
     </script>
 </head>
 <body>
-    <div class="ballcanvas">
-        <div class="ball b1"></div>
-        <div class="ball b2"></div>
-        <div class="ball b3"></div>
-        <div class="ball b4"></div>
-        <div class="ball b5"></div>
-        <div class="ball b6"></div>
+    <div id="ballcanvas">
     </div>
     <div class="container">
         <div class="displays">
@@ -183,12 +161,12 @@
             </header>
             <main>
                 <p>
-                    Eneter the number and click chat
+                    Enter the number and click chat
                 </p>
                 <form action="" name="data" id="data">
                     <div class="inputs">
                         <label for="code">
-                            Contry code
+                            country code
                         </label>
                         <input type="text" id="code" name="code" placeholder="+91" value="+91">
                     </div>
@@ -214,6 +192,9 @@
                     </a>
                     <a href="http://www.linkedin.com/in/anandu-babu-dreamdare">
                         <i class="fab fa-linkedin-in fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/AnanduBabucj7">
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
                     </a>
                 </div>
             </footer>
