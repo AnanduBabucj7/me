@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messageing</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100vh;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: block;
+            position: absolute;
+            background-color: rgba(1, 0, 0, .1);
+            align-items: center;
+            color: #e3e3e3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            z-index: 12;
+        }
+        .displays{
+            display: flex;
+            flex-flow: column;
+            height: 100vh;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header{
+            width: 100%;
+            text-align: center;
+            background-color: #01b636;
+            box-shadow:2px 5px 40px rgba(1, 0, 0, 1);
+        }
+        main{
+            width: 90%;
+            display:flex ;
+            flex-flow: column;
+            align-content: center;
+            justify-content: space-between;
+            background-color: #989898;
+            align-items: center;
+            border: 2px solid darkgreen;
+            border-radius: 50px 10px;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            /* border: 1px solid red; */
+            margin: 20px
+        }
+        .inputs{
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 100px;
+        }
+        #code{
+            width: 30px;
+        }
+        label{
+            word-wrap:break-word;
+        }
+        input{
+            background-color: aliceblue;
+            max-width:150px ;
+            height: 40px;
+            margin: 10px;
+            border:2px solid darkgreen;
+            border-radius: 10px;
+            text-align: center;
+        }
+        button{
+            background-color: #01b636;
+            color: cornsilk;
+            width:200px ;
+            height: 40px;
+            border: 2px solid darkgreen;
+            border-radius: 20px;
+            font-size: 150%;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 20px;
+        }
+        footer{
+            width: 100%;
+            height: 80px;
+            background-color: #333;
+            text-align: center;
+
+        }
+        .ballcanvas{
+            display: block;
+            position: absolute;
+            background-color:#e3e3e3;
+            height: 100vh;
+            width: 100%;
+            z-index: 1;
+        }
+        .ball{
+            border-radius: 50%;
+            background-color:#01b636 ;
+            position: absolute;
+            box-shadow:2px 5px 10px rgba(1, 0, 0, 1);
+        }
+        .b1{
+            height: 40px;
+            width: 40px;
+            top: 20%;
+            left: 20%;
+        }
+        .b2{
+            height: 20px;
+            width: 20px;
+            top: 70%;
+            left: 10%;
+        }
+        .b3{
+            height: 50px;
+            width: 50px;
+            top: 76%;
+            left: 80%;
+        }
+        .b4{
+            height: 30px;
+            width: 30px;
+            top: 15%;
+            left: 67%;
+        }
+        .b5{
+            height: 20px;
+            width: 20px;
+            top: 24%;
+            left: 66%;
+        }
+        .b6{
+            height: 20px;
+            width: 20px;
+            top: 30%;
+            left: 20%;
+        }
+    </style>
+    <script>
+        function chat(){
+            var link="http://wa.me/";
+            var code=document.data.code.value;
+            var num=document.data.number.value;
+            link=link+code+num;
+            console.log(link)
+            window.location.href = link;
+        }
+    </script>
+</head>
+<body>
+    <div class="ballcanvas">
+        <div class="ball b1"></div>
+        <div class="ball b2"></div>
+        <div class="ball b3"></div>
+        <div class="ball b4"></div>
+        <div class="ball b5"></div>
+        <div class="ball b6"></div>
+    </div>
+    <div class="container">
+        <div class="displays">
+            <header>
+                <h1>EasyChat</h1>
+            </header>
+            <main>
+                <p>
+                    Eneter the number and click chat
+                </p>
+                <form action="" name="data" id="data">
+                    <div class="inputs">
+                        <label for="code">
+                            Contry code
+                        </label>
+                        <input type="text" id="code" name="code" placeholder="+91" value="+91">
+                    </div>
+                    <div  class="inputs">
+                        <label for="number">
+                            Mobile Number 
+                        </label>
+                        <input type="text" id="number" name="number" placeholder="number">
+                    </div>
+                </form>
+                <div>
+                    <button onclick="chat()">Chat</button>
+                </div>
+            </main>
+            <footer>
+                <p>By Anandu Babu</p>
+                <div class="links">
+                    <a href="">
+                        twitter
+                    </a>
+                    <a href="">Whatsapp</a>
+                    <a href="">
+                        linkedin
+                    </a>
+                </div>
+            </footer>
+        </div>
+        
+    </div>
+</body>
+</html>
