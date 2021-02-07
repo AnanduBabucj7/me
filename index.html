@@ -24,19 +24,19 @@
             flex-flow: row;
             justify-content: center;
             height: 50px;
+            box-shadow: 0px 5px 20px;
         }
         #links,header{
             width: 50%;
+            display: flex;
             height: 100%;
             color: cornsilk;
             font-size: 30px;
             margin-left: 10px;
-            text-align: center;
         }
         header{
-        }
-        p{
-            border:2px solid crimson;
+            justify-content: center;
+            text-align: center;
         }
         #links{
         }
@@ -67,37 +67,91 @@
             justify-content: center;
             align-items: center;
         }
+        .about{
+            background-color: blueviolet;
+        }
+        .dec{
+            height: 30%;
+            width: 100%;
+            background-color: #333;
+        }
+        .innerdiv{
+            height: 100%;
+            width: 100%;
+            border-radius: 50% 0px 0px 0px;
+            background-color: blueviolet;
+        }
+        p{
+            margin: 0px;
+            border:0px;
+            padding: 10px;
+            color: cornsilk;
+        }
+        footer{
+            margin: 0px;
+            width: 100%;
+            min-height: 80px;
+            background-color: #333;
+            text-align: center;
+            bottom: 0px;
+        }
+        i{
+            color:bisque;
+            display: block;
+            margin: 10px;
+            padding: 10px;
+            color: #e3e3e3;
+            transition: .5s;
+        }
+        i:hover{
+            color: #01b636;
+        }
         @media only screen and (min-width: 600px) {
-            #toggle{
+            #toggle,#tbutton{
                 display: none;
             }
         }
         @media only screen and (max-width: 600px) {
-            .card {
-                background-color: lightblue;
-                }
                 #links{
                     display: none;
+                    padding: 5px;
+                    border-radius: 10px;
                 }
                 button{
                     width: 100%;
+
                 }
                 #toggle{
                     width: 50%;
                     position: relative;
                 }
-                i{
-                    height: 100%;
-                    color:bisque;
+                .fa-bars{
+                    margin: 0px;
                     padding-top:10px;
-                    display: block;
-                    /* border: 1px solid green; */
-                    position: absolute;
                     right: 10px;
+                    position: absolute;
                 }
         }
-
+        .data{
+            width: 100%;
+            height: auto;
+        }
     </style>
+    <script>
+        function toggle(){
+            var menu=document.getElementById("toggle");
+            menu.style.display="none";
+            // alert(menu)
+            document.getElementById("links").style.display="block"
+        }
+        function closeit(){
+            var menu=document.getElementById("toggle");
+            menu.style.display="block";
+            // alert(menu)
+            document.getElementById("links").style.display="none"
+        
+        }
+    </script>
 </head>
 <body>
     <div id="container">
@@ -105,21 +159,61 @@
             <header>
                 Creative Soul
             </header>
-            <div id="toggle">
+            <div id="toggle" onclick="toggle()">
                 <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
             </div>
             <div id="links">
-                <button>About me</button>
-                <button>My projects</button>
-                <button>My hobbies</button>
-                <button>Get in touch</button>
+                <button id="tbutton" onclick="closeit()">X</i></button>
+                <a href="#about"><button>About me</button></a>
+                <a href="#projects"><button>My projects</button></a>
+                <a href="#hobbies"><button>My hobbies</button></a>
+                <a href="#contact"><button>Get in touch</button></a>
             </div>
         </nav>
         <div class="card banner">
             <h1>Anandu Babu</h1>
             <h3>hi</h3>
         </div>
-        <div class="card"></div>
+        <div id="about"class="card about">
+            <div class="dec">
+                <div class="innerdiv">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="projects"class="card projects">
+            <div class="decc">
+                <div class="innerdivc">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="hobbies"class="card hobbies">
+            <div class="dec">
+                <div class="innerdiv">
+                    
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div>
+                <p>Anandu Babu</p>
+            </div>
+            <div class="data">
+                <a href="http://twitter.com/Anandu_Babu_">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="http://wa.me/+919947975674">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="http://www.linkedin.com/in/anandu-babu-dreamdare">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/AnanduBabucj7">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
