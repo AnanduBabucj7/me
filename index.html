@@ -2,115 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/f1c283d95c.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anandu's Space</title>
+    <title>Anandu</title>
     <style>
         body{
-            margin: 0px;
-            padding: 0px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px; padding: 0px;
         }
         #container{
-            height: auto;
             width: 100%;
-            margin-bottom: 30px;
+            height: 100vh;
+        }
+        /* div{
+            border: 1px solid red;
+        } */
+        nav{
+            background-color: blueviolet;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            height: 50px;
+        }
+        #links,header{
+            width: 50%;
+            height: 100%;
+            color: cornsilk;
+            font-size: 30px;
+            margin-left: 10px;
+            text-align: center;
         }
         header{
-            height: 70vh;
+        }
+        p{
+            border:2px solid crimson;
+        }
+        #links{
+        }
+        button{
+            background-color: blueviolet;
+            width: auto;
+            height: 100%;
+            border: 0px;
+            color: cornsilk;
+            padding: 0px 15px 0px 15px;
+            transition: .4s;
+        }
+        button:hover{
+            background-color: cornsilk;
+            color: blueviolet;
+        }
+        .card{
             width: 100%;
+            height: 100vh;
+            background-color: #333;
+        }
+        .banner{
+            height: 80vh;
+            background-color: #333;
+            color: blueviolet;
             display: flex;
             flex-flow: column;
             justify-content: center;
-            background-color:blueviolet;
-            border-radius: 0px 0px 70% ;
             align-items: center;
-            color: white;
         }
-        .cards{
-            width: auto;
-            height: 70vh;
-            padding-top: 60%;
-            padding-left: 20px;
-            margin-top: 20px;
-            background-color:blueviolet;
-            border-radius: 50% 0px 50% 0px;
-            color: aliceblue;
+        @media only screen and (min-width: 600px) {
+            #toggle{
+                display: none;
+            }
         }
-        .invert{
-            border-radius: 0px 50% 0px 50%;
+        @media only screen and (max-width: 600px) {
+            .card {
+                background-color: lightblue;
+                }
+                #links{
+                    display: none;
+                }
+                button{
+                    width: 100%;
+                }
+                #toggle{
+                    width: 50%;
+                    position: relative;
+                }
+                i{
+                    height: 100%;
+                    color:bisque;
+                    padding-top:10px;
+                    display: block;
+                    /* border: 1px solid green; */
+                    position: absolute;
+                    right: 10px;
+                }
         }
-        footer{
-            background-color: #333;
-            width: 100%;
-            height: 20vh;
-            display: flex;
-            color: aliceblue;
-            flex-flow: row;
-            align-items: center;
-            justify-content: center;
-            
-        }
-        nav{
-            width: 100%;
-            height: 60px;
-            position: fixed;
-            background-color: rgba(0, 0, 0, .6);
-            display: flex;
-            flex-flow: row;
-            align-items: center;
-            justify-content: center;
-        }
-        button{
-            background-color: rgba(0, 0, 0, .1);
-            color: aliceblue;
-            padding: 3px 5px 3px 5px;
-            margin: 10px;
-            border-radius: 7px;
-            border: 1px solid blueviolet;
-            transition: 1s;
-        }
-        button:hover{
-            background-color: black;
-            color: blueviolet;
-        }
+
     </style>
 </head>
 <body>
     <div id="container">
         <nav>
-            <a href="#about">
-                <button>
-                    About
-                </button>
-            </a>
-            <button>
-                Skills
-            </button>
-            <button>
-                Passion
-            </button>
-            <button>
-                Vision
-            </button>
+            <header>
+                Creative Soul
+            </header>
+            <div id="toggle">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </div>
+            <div id="links">
+                <button>About me</button>
+                <button>My projects</button>
+                <button>My hobbies</button>
+                <button>Get in touch</button>
+            </div>
         </nav>
-        <header class="title">
+        <div class="card banner">
             <h1>Anandu Babu</h1>
-            <h3>Creative Soul</h3>
-        </header>
-        <a name="about"></a>
-        <div class="cards">
-            
-            <p>
-                Hi, I am Anandu Babu from Thrissur,Kerala,India.
-            </p>
-            <p>I am currently working as a Graduate Trainee at Tata Consaltancy Servises</p>
+            <h3>hi</h3>
         </div>
-        <div class="cards invert">
-
-        </div>
+        <div class="card"></div>
     </div>
-    <footer>
-        <p>Desinged and developed by Anandu Babu</p>
-    </footer>
 </body>
 </html>
