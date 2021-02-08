@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nothing to do</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            min-height: 100vh;
+        }
+        nav{
+            width: 100%;
+            position: fixed;
+            height: 40px;
+            background-color: blueviolet;
+            color: #fff;
+            top: 0px;
+            display: flex;
+            flex-flow: row;
+            /* justify-items:; */
+        }
+        #welcome-section{
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            padding-top: 40px;
+            background-color:#333;
+            color: darkred;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+            height: 100%;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="#welcome-section">Welcome</a>
+        <a href="#projects">projects</a>
+    </nav>
+    <div id="welcome-section">
+        <h1>Hey, It's Anandu</h1>
+    </div>
+    <div id="projects">
+        <div class="project-tile">
+            <a href="">git</a>
+        </div>
+        <div class="project-tile">
+            <a href="">FCC</a>
+        </div>
+        <div class="project-tile">
+            <a href="">digimattaz</a>
+        </div>
+    </div>
+    <a href="" target="_blank" id="profile-link">Me on Github</a>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survayform</title>
+    <style>
+        body{
+            height: 100vh; width: 100%;
+            margin: 0px; padding: 0px;
+        }
+        #back{
+            height: 100vh; width: 100%;
+            margin: 0px; padding: 0px;
+            background-image: url("http://1.bp.blogspot.com/-b5jNIsuzNgU/VfVhDpeZnLI/AAAAAAAAKLo/MEoAC6EZUVU/s1600/blue-car-awasome-images.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 0;
+            position: fixed;
+        }
+        #data{
+            height: 100vh; width: 100%;
+            margin: 0px; padding: 0px;
+            position: absolute;
+            /* align-items: center; */
+            background-color:rgba(12, 12, 12,.3) ;
+        }
+        header{
+            background-color: rgba(12, 12, 12,.3);
+            text-align: center;
+            padding: 20px;
+            color: seashell;
+            text-transform: uppercase;
+        }
+        main{
+            margin-top: 20px;
+            display: block;
+            padding: 10px;
+            color: snow;
+            background-color: rgba(40, 40, 40, .8);
+            width: 95%;
+            min-height: 90vh;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+        form{
+            display: flex;
+            flex-flow: column;
+            margin: 20px;
+        }
+        input,select,option{
+            height: 40px;
+            border: 0px ;
+            margin: 10px;
+            border-radius: 20px;
+        }
+        label{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="back">
+    </div>
+    <div id="data">
+        <header>
+            <h1 id="title">
+                Choose your ride
+            </h1>
+            <p id="description">Thank you for subscribing MadCarLovers </p>
+        </header>
+        <main>
+            <form action="" id="survey-form" name="survey-form">
+                <label id="name-label" for="name">Full Name</label>
+                <input  type="text" name="name" id="name">
+                <label id="email-label" for="email">Email ID </label>
+                <input type="email" name="email" id="email">
+                <label id="number-label" for="number">Contact number</label>
+                <input type="number" name="number" id="number">
+                <label for="brand">Select your fevorit brand</label>
+                <select name="brand" id="dropdown">
+                    <option value="ford">Ford</option>
+                    <option value="mclaren">McLaren</option>
+                    <option value="shelby">Shelby</option>
+                    <option value="ferrari">Ferrari</option>
+                </select>
+                <label for=""></label>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
